@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تسجيل الدخول - جامعة حلوان</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset بسيط */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #003366, #0055a5);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .login-wrapper {
+      background: #fff;
+      border-radius: 15px;
+      width: 360px;
+      max-width: 90vw;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      color: #003366;
+      text-align: center;
+    }
+
+    .login-wrapper img {
+      width: 90px;
+      margin-bottom: 25px;
+    }
+
+    .login-wrapper h1 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      letter-spacing: 1.2px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 14px 18px;
+      border: 2px solid #0055a5;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      outline: none;
+      color: #003366;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #003366;
+      box-shadow: 0 0 6px #003366aa;
+    }
+
+    button {
+      background: #003366;
+      border: none;
+      padding: 14px 0;
+      border-radius: 8px;
+      color: white;
+      font-size: 1.15rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background: #002244;
+    }
+
+    .footer-text {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media(max-width: 400px) {
+      .login-wrapper {
+        width: 90vw;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper" role="main" aria-label="صفحة تسجيل الدخول لجامعة حلوان">
+    <img src="https://upload.wikimedia.org/wikipedia/ar/thumb/d/d0/Logo_Helwan_University.svg/1200px-Logo_Helwan_University.svg.png" alt="شعار جامعة حلوان" />
+    <h1>تسجيل الدخول - جامعة حلوان</h1>
+    <form action="submit.php" method="POST" autocomplete="off" novalidate>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required aria-label="البريد الإلكتروني" />
+      <input type="password" name="password" placeholder="كلمة المرور" required aria-label="كلمة المرور" />
+      <button type="submit">دخول</button>
+    </form>
+    <p class="footer-text">© 2025 جامعة حلوان. جميع الحقوق محفوظة.</p>
+  </div>
+
+</body>
+</html>
